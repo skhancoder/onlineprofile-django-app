@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'settingcss/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+</head>
+<body>
+  
+  <div class="shadow p-3 mb-5 bg-white ">
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="/editprofile/profile"><img id="backimg" width="45" src="{% static 'images/backlogo.jpg' %}"></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="setheader">
+    <div class="sethead">
+      <a>Profile</a>
+      <form method="POST" action="bioupdate">
+        {% csrf_token %}
+        <div class="namediv">
+          <a>Name</a>
+          <input id="namefield" class="form-control" type="text" placeholder="{{user.first_name}} {{user.last_name}}" disabled>
+        </div>
+
+        <div class="namediv">
+          <a>Username</a>
+          <input id="namefield" class="form-control" type="text" placeholder="{{user.username}}" disabled>
+        </div>
+
+        <div class="namediv">
+          <a>Bio</a>
+          <input id="namefield" value="{{bioitem.bio}}" class="form-control" type="text" name="bio">
+        </div>
+        <div class="updatebtn">
+          <button name="currentuser"  type="submit" class="btn btn-primary btn-sm">Update</button>
+        </div>    
+      </form>
+    </div>
+  </div>
+
+  <div class="analytics">
+    <div class="anaheader">
+      <a>Analytics</a>
+      <form>
+        {% csrf_token %}
+        <div class="anaviews">
+          <input id="namefield" class="form-control" type="text" placeholder=" Add your google analytics Code here">
+          <button name="currentuser"  type="submit" class="btn btn-primary btn-sm">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="appearance">
+    <div class="appheader">
+      <a>Appearance</a>
+      <form action="themechange" method="POST">
+        {% csrf_token %}
+        <div class="appthemes">
+          
+          <button value="theme1" name="theme1" class="theme1">_</button>
+          <button value="theme2" name="theme1" class="theme2">_</button>
+          <button value="theme3" name="theme1" class="theme3">_</button>
+          <button value="theme4" name="theme1" class="theme4">_</button>
+          <button value="theme5" name="theme1" class="theme5">_</button>
+          <button value="theme6" name="theme6" class="theme6">_</button>
+          <button value="theme7" name="theme1" class="theme7">_</button>
+          <button value="theme8" name="theme1" class="theme8">_</button>
+          <button value="theme9" name="theme1" class="theme9">_</button>
+          <button value="theme10" name="theme1" class="theme10">_</button>
+          <button value="theme11" name="theme1" class="theme11">_</button>
+          <button value="theme12" name="theme1" class="theme12">_</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="accountcnt">
+    <div class="accountbox">
+      <a>Account</a>
+      <div class="accountbtn">
+        <div class="toggleslider">
+          <a id="public">Public:</a>
+          <label class="switch" for="public" >
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        
+        <a href="/accounts/logout"><button type="button" class="btn btn-danger">Logout</button></a>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

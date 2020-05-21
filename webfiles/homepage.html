@@ -1,0 +1,313 @@
+{% load static %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'homecss/home.css' %}">
+        <link rel="stylesheet" href="{% static 'homecss/smartphone.css' %}">
+        <link rel="stylesheet" href="{% static 'homecss/part2.css' %}">
+        <link rel="stylesheet" href="{% static 'homecss/part3.css' %}">
+        
+        <style>
+            .header-container{
+                position: fixed;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding:8px;
+            }
+            .header-container a{
+                padding: 10px;
+                text-decoration: none;
+            }
+            
+            #top{
+                
+                animation-timing-function: ease;
+                animation-name: textanimate;
+                animation-duration: 1s;
+                text-align: center;
+                padding-top: 10%;
+                color:white;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            body{
+                
+                background: rgb(53,152,220);
+                
+            }
+            .tttext .text{
+                text-align: center;
+                color: white;
+            }
+            .register-login{ 
+                text-align: center;
+                display: block;
+                font-size: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .register-login .reg-btn{
+                border: 1px solid white;
+                border-radius: 10%;
+                text-decoration: none;
+                color:black;
+                padding:10px;
+                background-color: white;
+                
+            }
+            .register-login .reg-btn:hover{
+                background-color: rgb(247, 247, 247);
+            }
+
+            .register-login .login-btn:hover{
+                border: 2px solid white;
+            }
+            .register-login .login-btn{ 
+                border: 1px solid white;
+                border-radius: 10%;
+                text-decoration: none;
+                color: white;
+            }
+
+            .name .user_name{
+                text-align: center;
+                color: white;
+            }
+            .dashboard{ 
+                text-align: center;
+                display: block;
+                font-size: 25px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .dashboard .dash-btn{
+                border: 1px solid white;
+                border-radius: 10%;
+                text-decoration: none;
+                color:white;
+                
+            }
+            .dashboard .dash-btn:hover{
+                border: 2px solid white;
+            }
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+              }
+              
+              .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+              }
+              
+              .sidenav a:hover {
+                color: #f1f1f1;
+              }
+              
+              .sidenav .closebtn {
+                
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+              }
+              .sidebtn{
+                  position: relative;
+                  margin-top: 10px;
+                  padding: 1px;
+                  background-color: white;
+                  color: black;
+              }
+
+              .mcn{
+                font-size: 20px;
+                text-align: center;
+              }
+              
+              @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+              }
+              .vl{
+                border-left: 10px solid red;  
+                border-radius: 10px;
+                height: 200px;
+                position: relative;
+                left: 50%;
+              }
+              
+              #imgsign{
+                color: black;
+                font-size: 50px;
+                
+              }
+              .hl{
+                border-bottom: 10px solid green;
+                width: 50%;
+                align-self: center;
+              }
+            
+            @keyframes textanimate {
+                0%{
+                    transform: translateY(20px);
+                }
+                25%{
+                    transform: translateY(16px);
+                }
+                50%{
+                    transform: translateY(12px);
+                }
+                75%{
+                    transform: translateY(8px);
+                }
+                100%{
+                    transform: translateY(4px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">myApp</a>
+            <button onclick="openNav()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                {% if user.is_authenticated %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="accounts/logout">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="accounts/register">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accounts/login">Sign in</a>
+                </li>
+                {% endif %}
+
+              </ul>
+            </div>
+          </nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            {% if user.is_authenticated %}
+            <a href="editprofile/profile">Dashboard</a>
+            <a href="#">Account setting</a>
+            <a href="accounts/logout">Logout</a>
+            {% else %}
+            <a href="accounts/register">Getting Started</a>
+            <a href="accounts/register">Features</a>
+            <a href="accounts/register">Pricing</a>
+            {% endif%}
+        </div>
+        
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+      <div id="top">
+          <h1 style="font-size:50px;">Beautifully crafted online profile</h1>
+      </div>
+      {% if user.is_authenticated %}
+      <div class="name">
+        <h5 class="user_name">Hi, {{user.first_name}}</h5> 
+      </div>
+
+      <div class="dashboard">
+        <a class="dash-btn" href="editprofile/profile">DASHBOARD</a><br>
+        
+      </div>
+      {% else %}
+      <div class="tttext">
+          <h5 class="text">SignUp to create your own</h5> 
+      </div>
+      <br>
+      <div class="register-login">
+        <a class="reg-btn" href="accounts/register">GET STARTED FOR FREE</a><br><br>
+        <span style="font-size:15px;color:white;">Already on myApp?</span> <a style="font-size:15px;color:white;" href="accounts/login">Login</a>
+      </div>
+      {% endif %}
+
+      
+      <div class="smartcont">
+        <div class="smartphone">
+          <div class="content">
+            <video class="videocont" autoplay>
+              <source src="{% static 'phonetest.mp4' %}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__group">
+        <input type="text" class="form__input" id="name" placeholder="username" required="" />
+      </div>
+
+      <br>
+
+      <div class="p2">
+        
+        <div class="p2head">
+          <a>Don't worry about paper profile</a><br>
+        </div>
+        <br>
+        <div id="context" style=
+        "text-align: center;
+        color:black;
+        font-family:'Indie Flower', cursive;
+        font-size:25px;
+        ">
+          <a>RESUME+</a>
+          <a>SOCIAL MEDIA</a>
+        </div>
+        <div class="vl"></div>
+        
+        <div id="p2img" class="text-center">
+          <img class="rounded" width="100" src="{%static 'images/resume.png' %}" >
+          <img class="rounded" width="100" src="{%static 'images/facebook.png' %}" >
+          <img class="rounded" width="100" src="{%static 'images/instagram.jpg' %}" >
+          <img class="rounded" width="100" src="{%static 'images/twitter.png' %}" > 
+        </div>
+
+        <div id="p3" class="text-center"> 
+          <h2 class="rounded">Trusted by</h2>
+          <img class="rounded" width="100" src="{%static 'images/dell.svg' %}" >
+          <img class="rounded" width="100" src="{%static 'images/msi.svg' %}" >
+        </div>
+      </div>
+      
+
+    </body>
+</html>

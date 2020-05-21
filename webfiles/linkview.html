@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'linkviewcss/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>{{user.username}}</title>
+    <script>
+        $(".linkcontlink").click(function() {
+            window.location = $(this).find("a").attr("href"); 
+            return false;
+          });
+    </script>
+</head>
+<body>
+    <div id="maintopcont" class="container-fluid">
+        <div class=".container-fluid">
+            <div class="lvphoto">
+                <img class="rounded mx-auto d-block" width="150" src="{% static 'profileimages/profile-photo.png' %}">
+            </div>
+        </div>
+        <div class="uniqueuser">
+            <a>@{{user.username}}</a>
+        </div>
+        <div class="linkcont">
+            {% for things in all_items %}
+            <div onclick="window.open('{{things.link}}','mywindow');" class="linkcontlink">
+                <a>{{things.title}}</a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="linkviewfoot">
+            <a>myApp</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@{{user.username}}</title>
+        <link rel="stylesheet" href="{% static 'profilecss/style.css'%}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'homecss/smartphone.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function addlink(){
+                var a = document.getElementById("lcontainer");
+                document.getElementById("lcontainer").appendChild(a);
+            }
+
+            function copylink(){
+                var copyText = document.getElementById("linkid");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+                document.execCommand("copy");
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="shadow p-3 mb-5 bg-white ">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/">myApp</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="accounts/logout">Logout</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="/settings/mysettings"><img id="navlinkimage" width="45" src="{% static 'images/setting1.png' %}"></a>
+                  </li>
+              </ul>
+              
+        </div>
+        
+        <div id="topcontainer" class="container-fluid">
+            <div class="row">
+                <div id="leftcol" class="col-sm">
+                    <div id="lheader" class="leftheader">
+                        <a style="color: white;">YOUR LINKS</a><br>
+                        <form action="publish" method="POST">
+                            {% csrf_token %}
+                            <div id="lcontainer">
+                                <div id="linkcontainer" class="container-fluid">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Title</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="title" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">http://</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="link" placeholder="Link" aria-label="Username" aria-describedby="basic-addon1">
+                                        
+                                    </div>
+
+                                    <div class="linktools">
+                                        
+                                        <img src="{% static 'profileimages/analytics.webp' %}" width="25">
+                                        <button name="currentuser" value= {{user.username}} type="submit" class="btn btn-primary btn-sm">ADD LINK</button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        {% if all_items %}
+                                {% for things in all_items %}
+                                <div class="linkboxcont">
+                                    <div class="lbctitle">
+                                        <a>{{things.title}}</a>
+                                    </div>
+                                    <div class="lbclink">
+                                        <a href="{{things.link}}">{{things.link}}</a> 
+                                    </div>
+                                    <div class="lbctools">
+                                        <a href="{% url 'deletelink' things.id %}"><img src="{% static 'profileimages/deletelogo.png' %}" width="25"></a>
+                                    </div>
+                                </div>
+                                
+                                {% endfor %}
+                            {% endif%}
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="rightheader">
+                        <div class="smartcont">
+                            <div class="smartphone">
+                              <div class="content">
+                                <div class="phonelink">
+                                    <iframe src="https://www.google.com" class="phonelinkframe"></iframe>
+                                    </div>  
+                                </div>
+                            </div>
+                          </div>
+                        <div class="linkcopyshare">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <img width="38" src="{% static 'profileimages/copyicon.png'%}">
+                                </div>
+                                <input value="http://www.myapp/{{user.username}}" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <a style="color: white;">Share this link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

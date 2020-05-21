@@ -1,0 +1,95 @@
+#header{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,100,121,1) 41%, rgba(0,212,255,1) 100%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    
+}
+
+body{
+   background: rgb(239,252,255);
+background: linear-gradient(90deg, rgba(239,252,255,1) 0%, rgba(102,96,190,1) 0%, rgba(205,144,226,1) 100%, rgba(3,82,247,1) 100%, rgba(51,153,177,1) 100%);
+}
+#homeclick{
+    padding-bottom: 5px;
+    
+}
+.h-media{
+    padding: 15px;
+    color: white;
+}
+.h-media:link{
+    text-decoration: none;
+}
+.h-media:active{
+    text-decoration: none;
+}
+.h-media:visited{
+    text-decoration: none;
+}
+
+.h-media:hover{
+    color: white;
+    box-shadow: 20px;
+    text-shadow: 5px 5px 15px rgb(123, 178, 212);
+    text-decoration: none;
+}
+table{
+    background: rgb(239,252,255);
+    background: linear-gradient(90deg, rgba(239,252,255,1) 0%, rgba(217,60,255,1) 0%, rgba(51,153,177,1) 100%, rgba(251,239,255,1) 100%, rgba(0,82,255,1) 100%);
+    box-shadow: 10px 0px rgb(107, 191, 214);
+    color: white;
+}
+
+tr,th{
+    padding: 15px;
+}
+
+#photo{
+    width: 10%;
+    
+}
+
+#photo:hover{
+    transform: scale(1.5,1.5);
+    animation-delay: 5s;
+}
+
+.photo-container{
+    align-content: center;
+    display: inline-block;
+    text-align: center;
+}
+
+.fotter-container{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.footer{
+    text-decoration: none;
+    color: white;
+}
+.footer:active{
+    text-decoration: none;
+}
+.footer:hover{
+    text-decoration: none;
+    color: white;
+}
+.footer:link{
+    text-decoration: none;
+}
+.footer:visited{
+    text-decoration: none;
+}
+
+#editsave{
+    text-align: center;
+    background-color: black;
+}

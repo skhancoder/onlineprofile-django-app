@@ -1,0 +1,39 @@
+/* The device with borders */
+.smartcont{
+    
+    padding: 5px;
+}
+.smartphone {
+    
+    width: 200px;
+    height: 400px;
+    margin: auto;
+    border: 10px white solid;
+    border-top-width: 25px;
+    border-bottom-width: 25px;
+    border-radius: 36px;
+   
+    
+  }
+  
+  .smartphone .content {
+    
+    background: white;
+  }
+  .videocont{
+      width: 180px;
+      height: 350px;
+  }
+
+  .phonelink{
+    
+    width: 180px;
+    height: 350px;
+    background-color:rgb(245, 245, 245);
+    font-size: 12px;
+}
+
+.phonelink iframe{
+  width: 180px;
+  height: 350px;
+}

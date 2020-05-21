@@ -1,0 +1,323 @@
+body{
+    height: 100%;
+    background-color: grey;
+}
+
+.setheader .namediv{
+    line-height: 1.6;
+    font-size: 15px;
+    margin: 1%;
+    text-align: left;
+}
+.updatebtn{
+    margin: 1%;
+    text-align: left;
+}
+
+.setheader .sethead{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1%;
+    font-size: 25px;
+    text-align: center;
+    margin: 1%;
+}
+
+.analytics .anaheader{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1%;
+    font-size: 25px;
+    text-align: center;
+    margin: 2%;
+}
+
+.analytics .anaheader .anaviews{
+    text-align: left;
+    font-size: 15px;
+    margin: 2%;
+    line-height: 2;
+}
+
+.analytics .anaheader .anaviews input{
+    margin-top: 1%;
+    margin-bottom:1% ;
+}
+
+.appearance .appheader{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1%;
+    font-size: 25px;
+    text-align: center;
+    margin: 1%;
+}
+
+.appearance .appheader .appthemes{
+    margin: 2%;
+}
+.appearance .appheader .appthemes .theme1{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background-color: red;
+}
+
+.appearance .appheader .appthemes .theme2{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background-color: blue;
+}
+
+.appearance .appheader .appthemes .theme3{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background-color: yellow;
+}
+
+.appearance .appheader .appthemes .theme4{
+    color: white;;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background-color: black;
+}
+
+.appearance .appheader .appthemes .theme5{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(210,126,180,1) 0%, rgba(128,216,233,1) 100%);
+}
+
+.appearance .appheader .appthemes .theme6{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(169,210,126,1) 0%, rgba(128,216,233,1) 100%);
+}
+
+.appearance .appheader .appthemes .theme7{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(128,66,66,1) 0%, rgba(36,210,47,1) 100%);     
+}
+
+.appearance .appheader .appthemes .theme9{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(128,66,66,1) 0%, rgba(255,205,140,1) 100%);
+}
+
+.appearance .appheader .appthemes .theme10{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(66,81,128,1) 0%, rgba(208,255,140,1) 100%);
+}
+
+
+.appearance .appheader .appthemes .theme11{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(162,21,189,1) 0%, rgba(255,202,140,1) 100%); 
+}
+
+.appearance .appheader .appthemes .theme12{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(21,106,189,1) 0%, rgba(255,140,140,1) 100%); 
+}
+
+.appearance .appheader .appthemes .theme8{
+    color: white;
+    border-radius: 10%;
+    width: 15%;
+    height: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(94deg, rgba(2,0,36,1) 0%, rgba(128,66,66,1) 0%, rgba(166,176,233,1) 100%); 
+}
+.appearance .appheader .appthemes button{
+    border: none;
+    margin: 1%;
+}
+.appearance .appheader .appthemes button:hover{
+    color: transparent;
+    transition: 0.3s;
+    
+}
+
+.accountcnt .accountbox{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1%;
+    font-size: 25px;
+    text-align: center;
+    margin: 1%;
+}
+
+.accountcnt .accountbox .accountbtn{
+    line-height: 1.6;
+    text-align: left;
+    margin: 1%;
+}
+
+/* slider */
+.switch {
+    
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider { 
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* end slider */
+
+@media (min-width: 576px) {
+    .setheader .sethead{
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .analytics .anaheader{
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .appearance .appheader{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .accountcnt .accountbox{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+@media (min-width: 768px) {
+    .setheader .sethead{   
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .analytics .anaheader{
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .appearance .appheader{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .accountcnt .accountbox{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+@media (min-width: 992px) {
+    .setheader .sethead{  
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .analytics .anaheader{
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .appearance .appheader{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .accountcnt .accountbox{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    .setheader .setheader{   
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .analytics .anaheader{
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .appearance .appheader{
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+    .accountcnt .accountbox{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
